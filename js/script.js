@@ -15,8 +15,9 @@ $(function(){
       $('#weather').text(data.weather[0].main);
       $('img').attr("src","http://openweathermap.org/img/w/" + data.weather[0].icon + ".png");
       $('img').attr("alt",data.weather[0].main);
+      
     }).fail(function(data){
-        
+      alert('通信に失敗しました。');
     });
   });
 });
